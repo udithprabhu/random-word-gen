@@ -1,3 +1,34 @@
-<p>home works!</p>
-<app-word-output [randomword]="randomword"></app-word-output>
-<button type="button" (click)="refreshWord();">Click</button>
+<div class="top-bar">
+    <button type="button" class="github-icon-container text-align-center-vertical">
+        <fa name="github"></fa>
+    </button>
+</div>
+
+<div class="header-container">
+    Random Word Generator
+</div>
+<div class="input-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-12">
+                <div class="word-container">
+                    <app-word-output [randomword]="randomword"></app-word-output>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <button class="refresh-button fa-button" type="button" (click)="refreshWord();">
+                    <fa name="refresh"></fa>
+                </button>
+                <button class="clipboard-button fa-button" type="button" (click)="copyWord();">
+                        <fa name="copy"></fa>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- <p>home works!</p> -->
