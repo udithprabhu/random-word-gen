@@ -3,6 +3,7 @@ import { RandomWordService } from '../random-word.service';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
     private randomWordService: RandomWordService,
     private toastr: ToastrService,
     private route: ActivatedRoute,
+    private location: Location,
     @Inject(DOCUMENT) private document: Document
   ) { }
   randomword:string;
@@ -23,11 +25,16 @@ export class HomeComponent implements OnInit {
     if(this.route.snapshot.queryParamMap.get("api")){
       this.document.documentElement.innerHTML = "something"
     }
+    this.resetURL();
     this.refreshWord();
   }
 
   refreshWord(){
     this.randomword = this.randomWordService.getWord();
+  }
+
+  resetURL(){
+    this.location.replaceState('');
   }
   
   copyWord(){
