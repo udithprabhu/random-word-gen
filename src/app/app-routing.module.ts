@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: 'random-word-generator/', component: HomeComponent},
   {path: 'api/v1/generate', component: ApiOutputComponent }
 ];
 
