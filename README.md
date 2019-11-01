@@ -1,27 +1,32 @@
-# RandomWordGen
+# Random Word Generator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.15.
+Random Word Genertor uses [Markov chain](https://en.wikipedia.org/wiki/Markov_chain) to generate random words which have the same character flow as valid english words.
 
-## Development server
+# Features!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  - *Dont like a word?* Click Refresh to change it.
+  - *Like a word?* Click Copy to Copy the word to clipboard
 
-## Code scaffolding
+## Tech
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* [Angular] - Developed in pure Angular without the need for Server side program.
+* [Python] - Generated the Markov Probability chain in Python.
 
-## Build
+Used the english word list from [here](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) to generate the probability chain.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Usage
 
-## Running unit tests
+Visit the github pages - [https://udithprabhu.github.io/random-word-gen/](https://udithprabhu.github.io/random-word-gen/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Development
 
-## Running end-to-end tests
+Want to contribute? Awesome!
+ * Fork - [https://github.com/udithprabhu/random-word-gen/](https://github.com/udithprabhu/random-word-gen/)
+ * Raise PR
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Todos
 
-## Further help
+ - Apply a better color palette
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+**"Open source is a development methodology; free software is a social movement." ~ Richard Stallman**
