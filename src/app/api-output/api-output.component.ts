@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-api-output',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiOutputComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
+    console.log(this.document.documentElement.innerHTML);
+    this.document.documentElement.innerHTML = "Something Works";
   }
 
 }

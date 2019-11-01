@@ -18,6 +18,7 @@ export class RandomWordService {
   }
 
   getWord(minLength: number = 4, maxLength: number = 10): string {
+    
     let keys = Object.keys(probabilityJson)
     let initial = keys[Math.floor(Math.random() * keys.length)];
     var result = initial;
@@ -37,6 +38,5 @@ export class RandomWordService {
       result += choice
     }
     return result.slice(0, -1)
-    // return this.weightedChoice(["Something", "Nothing", "SomeNothing"], [0.33, 0.33, 0.33]);
   }
 }
